@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <PackageId>com.jafarH.URLSessions</PackageId>
+    <Authors>JafarH96</Authors>
+    <Company>JafarH</Company>
+    <Description>Implementation of URL Session similar to Swift. It provides an API to make HTTP requests easily .</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>HTTP, HTTPRequest, Network, URL, URLSession, API</PackageTags>
+    <PackageReleaseNotes>First Release.</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/JafarH96/URLSessions</PackageProjectUrl>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29418.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "URLSessions", "URLSession\URLSessions.csproj", "{57EB7305-CAA1-46FB-BC4C-74EACB483106}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "URLSessionTest", "URLSessionTest\URLSessionTest.csproj", "{77B6A5D8-DD80-4BE0-8C8E-0CD86563E4B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57EB7305-CAA1-46FB-BC4C-74EACB483106}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57EB7305-CAA1-46FB-BC4C-74EACB483106}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57EB7305-CAA1-46FB-BC4C-74EACB483106}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57EB7305-CAA1-46FB-BC4C-74EACB483106}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77B6A5D8-DD80-4BE0-8C8E-0CD86563E4B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77B6A5D8-DD80-4BE0-8C8E-0CD86563E4B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77B6A5D8-DD80-4BE0-8C8E-0CD86563E4B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77B6A5D8-DD80-4BE0-8C8E-0CD86563E4B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6BF45EB2-1BD5-45EE-8D71-A77DE975C691}
+	EndGlobalSection
+EndGlobal

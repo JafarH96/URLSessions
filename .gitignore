@@ -1,0 +1,8 @@
+*obj
+*bin
+*.vs
+*.nugpkg
+
+URLSession/*.exe
+URLSessionTest/*.exe
+packages

@@ -9,12 +9,24 @@ namespace URLSessions
 {
     public class URLSession
     {
+        /// <summary>
+        /// The shared instance of the URLSession
+        /// </summary>
         public static URLSession shared = new URLSession();
 
+        /// <summary>
+        /// Provides an API to make HTTP requests or download files
+        /// </summary>
         public URLSession()
         {
         }
 
+        /// <summary>
+        /// Creates a task that retrieves the contents of the specified URL request
+        /// </summary>
+        /// <typeparam name="T">Response type. like a struct, a class, or a list of a specific data type</typeparam>
+        /// <param name="request"></param>
+        /// <returns>Response and HTTP status code</returns>
         public async Task<(T, HttpStatusCode)> DataTask<T>(URLRequest request)
         {
             HttpClient client = new HttpClient();
@@ -77,6 +89,13 @@ namespace URLSessions
             }
         }
 
+        /// <summary>
+        /// Creates a task that retrieves the contents of the specified URL
+        /// </summary>
+        /// <typeparam name="T">Response type. like a struct, a class, or a list of a specific data type</typeparam>
+        /// <param name="url"></param>
+        /// <param name="timeout"></param>
+        /// <returns>Response and HTTP status code</returns>
         public async Task<(T, HttpStatusCode)> Data<T>(URL url, int timeout = 30)
         {
             if (url.UrlString is null)
@@ -95,6 +114,13 @@ namespace URLSessions
             return (default(T), response.StatusCode);
         }
 
+        /// <summary>
+        /// Downloads the contents of a URL based on the specified URL
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="destination"></param>
+        /// <param name="timeout"></param>
+        /// <returns></returns>
         public async Task<HttpStatusCode> Download(URL url, string destination, int timeout = 30)
         {
             if (url.UrlString is null)

@@ -6,6 +6,9 @@ namespace URLSessions
 {
     public class URLRequest
     {
+        /// <summary>
+        /// HTTP method
+        /// </summary>
         public enum Method
         {
             GET,
@@ -16,11 +19,22 @@ namespace URLSessions
 
         public URL url;
         public Method method;
+        /// <summary>
+        /// HTTP body as json
+        /// </summary>
         public string jsonBody;
+        /// <summary>
+        /// Request timeout
+        /// </summary>
         public TimeSpan timeout;
         public Dictionary<string, string> allHTTPHeaders;
-       
 
+        /// <summary>
+        /// Encapsulates two essential properties of a load request: the URL to load and the policies used to load it
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="method"></param>
+        /// <param name="timeout"></param>
         public URLRequest(URL url, Method method, int timeout = 30)
         {
             if(url.UrlString is null)
@@ -40,11 +54,20 @@ namespace URLSessions
             }
         }
 
+        /// <summary>
+        /// Set http body for POST or PUT requests
+        /// </summary>
+        /// <param name="body">Any struct or class models</param>
         public void SetHTTPBody(object body)
         {
             jsonBody = JsonSerializer.Serialize(body);
         }
 
+        /// <summary>
+        /// Set HTTP header
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="forHTTPHeader">Header key</param>
         public void SetValue(string value, string forHTTPHeader)
         {
             if (allHTTPHeaders.ContainsKey(forHTTPHeader))
@@ -57,6 +80,10 @@ namespace URLSessions
             }
         }
 
+        /// <summary>
+        /// Returns http method as string
+        /// </summary>
+        /// <returns>HTTP method string</returns>
         public string GetMethodString()
         {
             switch (method)

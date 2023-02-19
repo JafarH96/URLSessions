@@ -4,6 +4,9 @@ namespace URLSessions
 {
     public class URL
     {
+        /// <summary>
+        /// The absolute string for the URL
+        /// </summary>
         public string UrlString { get; }
         public string BaseURL {
             get
@@ -13,6 +16,10 @@ namespace URLSessions
             }
         }
 
+        /// <summary>
+        /// A value that identifies the location of a resource, such as an item on a remote server
+        /// </summary>
+        /// <param name="urlString">A URL location</param>
         public URL(string urlString)
         {
             if (Utils.URLValidator.IsMatch(urlString))
